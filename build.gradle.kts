@@ -24,6 +24,7 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:$logback_version")
     implementation("io.ktor:ktor-serialization:$ktor_version")
     implementation("io.insert-koin:koin-ktor:3.1.2")
+    implementation("org.litote.kmongo:kmongo:4.3.0")
 
     testImplementation("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")

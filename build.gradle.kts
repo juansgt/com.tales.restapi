@@ -6,6 +6,9 @@ plugins {
     application
     kotlin("jvm") version "1.5.31"
     kotlin("plugin.serialization") version "1.5.31"
+    id("com.github.johnrengelman.shadow")  version "7.0.0"
+    id ("com.google.cloud.tools.appengine") version "2.4.2"
+
 }
 
 group = "com.tales"
@@ -16,6 +19,16 @@ application {
 
 repositories {
     mavenCentral()
+}
+
+appengine {
+    stage {
+        setArtifact("build/libs/${project.name}-${project.version}-all.jar")
+    }
+    deploy {
+        version = "GCLOUD_CONFIG"
+        projectId = "GCLOUD_CONFIG"
+    }
 }
 
 dependencies {

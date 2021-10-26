@@ -2,6 +2,8 @@ package com.tales
 
 import com.tales.model.dataaccess.talesrepository.ITaleRepository
 import com.tales.model.dataaccess.talesrepository.TaleRepository
+//import com.tales.model.dataaccess.talesrepository.TaleRepository
+import com.tales.model.dataaccess.talesrepository.TaleRepositoryNoMongo
 import com.tales.model.services.IQueryServiceNoInput
 import com.tales.model.services.findalltales.FindAllTalesResult
 import com.tales.model.services.findalltales.FindAllTalesService

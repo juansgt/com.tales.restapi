@@ -2,9 +2,9 @@ name: Docker Image build and delivery
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ add-deploy-container-github-action ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ add-deploy-container-github-action ]
 
 jobs:
 

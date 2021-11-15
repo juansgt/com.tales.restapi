@@ -26,14 +26,20 @@ jobs:
           java-version: 11
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+      - name: Ls1
+        run: ls
       - name: Build with Gradle
         run: ./gradlew build
       - name: Pwd
         run: pwd
-      - name: Ls
+      - name: Ls2
+        run: ls
+      - name: Cd
+        run: cd ./build/install/com.tales.restapi/
+      - name: Ls3
         run: ls
       - name: Build the Docker image
-        run: docker build --file Dockerfile --tag tales
+        run: docker build . --file Dockerfile --tag tales
 
       - name: Docker Push
         run: docker push ${{secrets.DOCKER_USER}}/tales

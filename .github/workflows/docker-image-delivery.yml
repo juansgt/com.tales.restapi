@@ -30,6 +30,8 @@ jobs:
         run: ./gradlew build
       - name: Pwd
         run: pwd
+      - name: Ls
+        run: ls
       - name: Build the Docker image
         run: docker build --file Dockerfile --tag tales
 

@@ -34,11 +34,15 @@ jobs:
         run: pwd
       - name: Ls2
         run: ls
-#      - name: Cd1
-#        run: cd ./build
-#      - name: Cd
-#        run: cd ./build/install/com.tales.restapi/
+      - name: Cd1
+        run: cd ./build
       - name: Ls3
+        run: ls
+      - name: Cd2
+        run: cd ./build/install
+      - name: Ls4
+        run: ls
+      - name: Ls4
         run: ls
       - name: Build the Docker image
         run: docker build --tag tales

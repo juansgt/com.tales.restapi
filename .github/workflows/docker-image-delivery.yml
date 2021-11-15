@@ -35,7 +35,7 @@ jobs:
       - name: Ls2
         run: ls
       - name: Cd1
-        run: cd ./build
+        run: cd /build
       - name: Ls3
         run: ls
       - name: Cd2

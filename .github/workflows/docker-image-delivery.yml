@@ -28,8 +28,10 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Pwd
+        run: pwd
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag tales
+        run: docker build --file Dockerfile --tag tales
 
       - name: Docker Push
         run: docker push ${{secrets.DOCKER_USER}}/tales

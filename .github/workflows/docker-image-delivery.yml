@@ -26,26 +26,13 @@ jobs:
           java-version: 11
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-      - name: Ls1
-        run: ls
       - name: Build with Gradle
-        run: ./gradlew build
-      - name: Pwd
-        run: pwd
-      - name: Ls2
-        run: ls
-      - name: Cd1
-        run: cd build
-      - name: Ls3
-        run: ls
-      - name: Cd2
-        run: cd ./build/install
-      - name: Ls4
-        run: ls
-      - name: Ls4
-        run: ls
+        run: |
+          ./gradlew build
+          cd ./build
+          ls
       - name: Build the Docker image
-        run: docker build --tag tales
+        run: docker . build --tag tales
 
       #        run: docker build . --file Dockerfile --tag tales
 
